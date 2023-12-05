@@ -1,0 +1,17 @@
+steps:
+#Build the image
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io/k8s-deployment/myapp:v1', '.']
+
+#Push the image
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'gcr.io/k8s-deployment/myapp:v1']
+
+# deploy container image to GKE
+- name: "gcr.io/cloud-builders/gke-deploy"
+  args:
+  - run
+  - --filename=K8s/
+  - --image=gcr.io/k8s-deployment/myapp:v1
+  - --location=us-west1-b
+  - --cluster=mykube
