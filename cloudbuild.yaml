@@ -13,5 +13,5 @@ steps:
   - run
   - --filename=K8s/
   - --image=gcr.io/k8s-deployment/myapp:v1
-  - --location=asia-south1
+  - --location=us-central1
   - --cluster=mykube
