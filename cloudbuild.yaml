@@ -9,5 +9,5 @@ steps:
   args: ['apply', '-f', 'k8s/deployment.yaml']
 
 images:
-- 'gcr.io/nodejs-app/nodejs-restapi'
+- 'gcr.io/k8s-deployment/nodejs-restapi'
 
