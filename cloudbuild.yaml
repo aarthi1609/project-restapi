@@ -7,10 +7,6 @@ steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'gcr.io/k8s-deployment/myapp:v1']
 
-# Authenticate Docker with GCR
-- name: 'gcr.io/cloud-builders/docker'
-  args: ['-c', 'gcr.io/cloud-builders/docker', 'login', '-u', '_json_key', '-p', 'cat k8s.json/', 'https://gcr.io']
-
 # deploy container image to GKE
 - name: "gcr.io/cloud-builders/gke-deploy"
   args:
