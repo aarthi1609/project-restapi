@@ -1,9 +1,9 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/nodejs-app/nodejs-restapi', '.']
+  args: ['build', '-t', 'gcr.io/k8s-deployment/nodejs-restapi', '.']
 
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'gcr.io/nodejs-app/nodejs-restapi']
+  args: ['push', 'gcr.io/k8s-deployment/nodejs-restapi']
 
 - name: 'gcr.io/cloud-builders/kubectl'
   args: ['apply', '-f', 'k8s/deployment.yaml']
