@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: nodejs-app
-          image: gcr.io/k8s-deployment/restapi:latest
+          image: gcr.io/k8s-deployment/nodejs-restapi:latest
           ports:
             - containerPort: 3000
 ---
