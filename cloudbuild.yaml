@@ -9,8 +9,8 @@ steps:
   args:
     - run 
     - --filename=deployment.yaml
-    - --image=gcr.io/k8s-deployment-407205/gcpdevops
-    - --location=us-central1
+    - --image=gcr.io/k8s-deployment-407205/nodejs-restapi
+    - --location=us-west1-b
     - --cluster=mykube
   
 
