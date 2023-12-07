@@ -15,6 +15,7 @@ spec:
       containers:
         - name: nodejs-app
           image: gcr.io/k8s-deployment/nodejs-restapi:latest
+          imagePullPolicy: Always
           ports:
             - containerPort: 3000
 ---
