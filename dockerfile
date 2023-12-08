@@ -12,4 +12,6 @@ EXPOSE 3000
 
 CMD ["npm", "start"]
 
+RUN npm install json-server
+
 CMD ["json-server", "--watch", "./db.json"]
