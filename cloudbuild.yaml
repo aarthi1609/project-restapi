@@ -1,16 +1,16 @@
 steps:
-- name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/k8s-deployment-407205/nodejs-restapi', '.']
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'gcr.io/k8s-deployment-407205/nodejs-restapi', '.']
 
-- name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'gcr.io/k8s-deployment-407205/nodejs-restapi']
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'gcr.io/k8s-deployment-407205/nodejs-restapi']
 
-- name: 'gcr.io/cloud-builders/gke-deploy'
-  args:
-    - run 
-    - --filename=deployment.yaml
-    - --image=gcr.io/k8s-deployment-407205/nodejs-restapi
-    - --location=us-west1-b
-    - --cluster=mykube
-  
+  - name: 'gcr.io/cloud-builders/gke-deploy'
+    args:
+      - 'run'
+      - '--filename=k8s-configs/deployment.yaml'
+      - '--image=gcr.io/k8s-deployment-407205/nodejs-restapi'
+      - '--location=us-west1-b'
+      - '--cluster=mykube'
+
 
