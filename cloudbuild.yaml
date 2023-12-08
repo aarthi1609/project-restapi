@@ -12,5 +12,6 @@ steps:
       - '--image=gcr.io/k8s-deployment-407205/nodejs-restapi'
       - '--location=us-central1'
       - '--cluster=autopilot-cluster-1'
+      - '--timeout=10m'
 
 
