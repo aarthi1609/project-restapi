@@ -8,6 +8,6 @@ RUN npm install -g json-server
 COPY package*.json ./
 COPY . .
 
-EXPOSE 5000
+EXPOSE 3001
 
 CMD ["json-server", "--watch", "db.json", "--port", "3001"]
