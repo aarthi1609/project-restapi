@@ -29,6 +29,6 @@ spec:
     app: restapi
   ports:
     - protocol: TCP
-      port: 80
+      port: 10256
       targetPort: 3001
   type: LoadBalancer
