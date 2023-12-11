@@ -10,5 +10,5 @@ steps:
       - 'run'
       - '--filename=k8s-configs/deployment.yaml'
       - '--image=gcr.io/k8s-deployment-407205/nodejs-restapi'
-      - '--location==asia-south1'
+      - '--location=asia-south1'
       - '--cluster=cluster-1'
